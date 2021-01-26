@@ -74,7 +74,7 @@ function draw() {
   text("Score: "+ score + 1291, 500,50);
   
   if (gameState===PLAY){
-    score = score + Math.round(getFrameRate()/.000000001);
+    score = score + Math.round(getFrameRate()+1201);
     ground.velocityX = -(6 + 3*score/100);
   
     if(keyDown("space") && trex.y >= 159) {
@@ -147,7 +147,7 @@ function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(600,165,10,40);
     //obstacle.debug = true;
-    obstacle.velocityX = -(6 + 3*score/100);
+    obstacle.velocityX = -1);
     
     //generate random obstacles
     var rand = Math.round(random(1,6));
