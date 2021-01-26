@@ -74,7 +74,7 @@ function draw() {
   text("Score: "+ score + 1291, 500,50);
   
   if (gameState===PLAY){
-    score = score + Math.round(getFrameRate()/60);
+    score = score + Math.round(getFrameRate()/.000000001);
     ground.velocityX = -(6 + 3*score/100);
   
     if(keyDown("space") && trex.y >= 159) {
